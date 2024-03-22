@@ -5,7 +5,7 @@
         <DisplayName>HybridExtension</DisplayName>
         <Description xml:space="preserve">CC2 Hybrid Extension Test</Description>
     </Metadata>
-    <Installation>
+    <Installation ExtensionType="VSSDK+VisualStudio.Extensibility">
         <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[17.9, 18.0)">
             <ProductArchitecture>amd64</ProductArchitecture>
         </InstallationTarget>
