@@ -1,8 +1,11 @@
-﻿using Microsoft.VisualStudio.Shell;
+﻿using Microsoft.VisualStudio.Extensibility;
+using Microsoft.VisualStudio.Extensibility.Shell;
+using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using System;
 using System.ComponentModel.Design;
 using System.Globalization;
+using System.Threading;
 using Task = System.Threading.Tasks.Task;
 
 namespace HybridExtension
@@ -93,10 +96,20 @@ namespace HybridExtension
 
         private async Task ExecuteAsync()
         {
-            string message = string.Format(CultureInfo.CurrentCulture, "Inside {0}.MenuItemCallback()", this.GetType().FullName);
+            string message = "Hello world!";
             string title = "VS SDK Message";
 
-            // Show a message box to prove we were here
+            try
+            {
+                var extensibility = await ServiceProvider.GetServiceAsync<VisualStudioExtensibility, VisualStudioExtensibility>();
+                await extensibility.Shell().ShowPromptAsync("Hello from an in-proc VS.Ext call", PromptOptions.OK, CancellationToken.None);
+                message += " We were successful in using VS.Ext from VS SDK!";
+            }
+            catch (Exception ex)
+            {
+                message = $"Failed to use VS.Ext from VS SDK: {ex.Message}";
+            }
+
             VsShellUtilities.ShowMessageBox(
                 this.package,
                 message,

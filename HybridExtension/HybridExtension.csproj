@@ -84,6 +84,7 @@
 		<PackageReference Include="Microsoft.VisualStudio.SDK" Version="17.9.37000" ExcludeAssets="runtime">
 			<IncludeAssets>compile; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
+		<PackageReference Include="Microsoft.VisualStudio.Extensibility" Version="17.9.2092" />
 		<PackageReference Include="Microsoft.VisualStudio.Extensibility.Sdk" Version="17.9.2092" />
 		<PackageReference Include="Microsoft.VisualStudio.Extensibility.Build" Version="17.9.2092" />
 	</ItemGroup>
