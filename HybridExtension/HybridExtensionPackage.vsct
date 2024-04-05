@@ -59,6 +59,14 @@
 					<ButtonText>HYBRID SAMPLE: Hello World (VS SDK)</ButtonText>
 				</Strings>
 			</Button>
+			
+			<Button guid="guidHybridExtensionPackageCmdSet" id="VsSdkMefReferenceCommandId" priority="0x0101" type="Button">
+				<Parent guid="guidHybridExtensionPackageCmdSet" id="MyMenuGroup" />
+				<Icon guid="guidImages" id="bmpPic1" />
+				<Strings>
+					<ButtonText>HYBRID SAMPLE: Use MEF Component (VS SDK)</ButtonText>
+				</Strings>
+			</Button>
 		</Buttons>
 
 		<!--The bitmaps section is used to define the bitmaps that are used for the commands.-->
@@ -80,6 +88,7 @@
 		<GuidSymbol name="guidHybridExtensionPackageCmdSet" value="{4c75d764-d134-45c7-9e84-449bac425ba8}">
 			<IDSymbol name="MyMenuGroup" value="0x1020" />
 			<IDSymbol name="VsSdkHelloWorldCommandId" value="0x0100" />
+			<IDSymbol name="VsSdkMefReferenceCommandId" value="0x0101" />
 		</GuidSymbol>
 
 		<GuidSymbol name="guidImages" value="{89b4ae10-5a3f-4f12-b50a-4d4101cd3f9f}" >

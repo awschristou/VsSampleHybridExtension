@@ -46,6 +46,7 @@ namespace HybridExtension
             await this.JoinableTaskFactory.SwitchToMainThreadAsync(cancellationToken);
 
             await VsSdkHelloWorldCommand.InitializeAsync(this);
+            await VsSdkMefReferenceCommand.InitializeAsync(this);
         }
 
         #endregion

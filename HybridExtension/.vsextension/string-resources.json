@@ -1,3 +1,4 @@
 {
-  "HybridExtension.VsExtHelloWorldCommand.DisplayName": "HYBRID SAMPLE: Hello World (VS.Ext)"
+  "HybridExtension.VsExtHelloWorldCommand.DisplayName": "HYBRID SAMPLE: Hello World (VS.Ext)",
+  "HybridExtension.VsExtHelloMefReferenceCommand.DisplayName": "HYBRID SAMPLE: Use MEF Component (VS.Ext)"
 }
