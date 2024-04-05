@@ -47,6 +47,7 @@ This wasn't successful. It appears the VisualStudioExtensibility service is not 
 ### Discovery / Documentation
 
 The Journey section above shows some rough edges that will make it challenging for developers to onboard existing extensions to VS.Ext:
+
 - converting VSIX csproj files to a SDK style project can be very challenging and time consuming
 - I am concerned that my existing extension's stability may be compromised as a result of the SDK-style project conversion. There's a lot that goes on in the VS build tooling that I don't understand.
 - the docs may be missing some steps/content around `Installation ExtensionType="VSSDK+VisualStudio.Extensibility"` in the vsixmanifest file
@@ -58,6 +59,8 @@ With guidance from [Use VisualStudio.Extensibility from existing VSSDK extension
 The sample code can be seen in [VsSdkHelloWorldCommand.cs](https://github.com/awschristou/VsSampleHybridExtension/commit/cc1d1326ff1eed78200b5aadc8fad82e096bb786#diff-d54a7b54fc8535f87c248ffbd8fc2c45d371792a79b37c81eb23f1d36c399b14R104).
 
 ### VS.Ext Command can fail shortly after start-up
+
+_Update: This will be fixed in an [upcoming 17.10 preview](https://github.com/microsoft/VSExtensibility/issues/350)_
 
 If I try to run the VS.Ext based command immediately after Visual Studio starts up, nothing happens. My debugger output contains the following:
 
