@@ -54,6 +54,8 @@ The Journey section above shows some rough edges that will make it challenging f
 
 ### Unable to obtain the VisualStudioExtensibility service
 
+[Issue #375 filed in GitHub repo](https://github.com/microsoft/VSExtensibility/issues/375)
+
 With guidance from [Use VisualStudio.Extensibility from existing VSSDK extensions](https://learn.microsoft.com/en-us/visualstudio/extensibility/visualstudio.extensibility/get-started/in-proc-extensions?view=vs-2022#use-visualstudioextensibility-from-existing-vssdk-extensions), I should be able to gain access to the VS.Ext API from a VS SDK based extension, however this results in the exception "The VisualStudioExtensibility service is unavailable."
 
 The sample code can be seen in [VsSdkHelloWorldCommand.cs](https://github.com/awschristou/VsSampleHybridExtension/commit/cc1d1326ff1eed78200b5aadc8fad82e096bb786#diff-d54a7b54fc8535f87c248ffbd8fc2c45d371792a79b37c81eb23f1d36c399b14R104).
